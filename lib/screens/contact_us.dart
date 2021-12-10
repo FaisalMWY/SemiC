@@ -18,9 +18,30 @@ class _ContactUsState extends State<ContactUs> {
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
-      await launch(url, forceSafariVC: false, forceWebView: true);
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: true,
+      );
     } else
       throw 'launch error';
+  }
+
+  Future<void> _launchUniversalLink(String url) async {
+    if (await canLaunch(url)) {
+      final bool nativeAppLaunchSucceeded = await launch(
+        url,
+        forceSafariVC: false,
+        universalLinksOnly: true,
+      );
+      if (!nativeAppLaunchSucceeded) {
+        await launch(
+          url,
+          forceSafariVC: false,
+          forceWebView: true,
+        );
+      }
+    }
   }
 
   @override
@@ -36,7 +57,7 @@ class _ContactUsState extends State<ContactUs> {
             child: Row(
               children: [
                 RecomendPlantCard(
-                  image: "assets/images/outlook_3.png",
+                  image: "assets/images/outlook_.png",
                   title: "Email",
                   country: "Info@semiksa.com",
                   // price: 1400,
@@ -48,7 +69,7 @@ class _ContactUsState extends State<ContactUs> {
                   country: "+966 53 222 5562",
                   // price: 1400,
                   press: () {
-                    _launchInBrowser('https://wa.me/+966532225562');
+                    _launchUniversalLink('https://wa.me/+966532225562');
                   },
                 ),
               ],
@@ -63,7 +84,7 @@ class _ContactUsState extends State<ContactUs> {
                   country: "Semi_KSA",
                   // price: 1400,
                   press: () {
-                    _launchInBrowser('https://twitter.com/Semi_ksa');
+                    _launchUniversalLink('https://twitter.com/Semi_ksa');
                   },
                 ),
                 RecomendPlantCard(
@@ -72,7 +93,7 @@ class _ContactUsState extends State<ContactUs> {
                   country: "semi.ksa",
                   // price: 1400,
                   press: () {
-                    _launchInBrowser('https://www.instagram.com/semi.ksa/');
+                    _launchUniversalLink('https://www.instagram.com/semi.ksa/');
                   },
                 ),
               ],

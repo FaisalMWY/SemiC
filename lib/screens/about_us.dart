@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/home/components/underlined_title.dart';
 import 'package:plant_app/screens/home/home_screen.dart';
 
 import 'home/components/featurred_plants.dart';
@@ -21,7 +22,7 @@ class _AboutUsState extends State<AboutUs> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(),
-          TitleWithMoreBtn(title: "About us", press: () {}),
+          UnderlinedTitle(title: "About us", press: () {}),
           FeaturePlantCard(
             image: "assets/images/about_us.jpg",
             press: () {},

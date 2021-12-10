@@ -3,10 +3,28 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/features_screens/social_network_management.dart';
 import 'package:plant_app/screens/home/components/header_with_seachbox.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IdentityLogo extends StatefulWidget {
   @override
   _IdentityLogoState createState() => _IdentityLogoState();
+}
+
+Future<void> _launchUniversalLink(String url) async {
+  if (await canLaunch(url)) {
+    final bool nativeAppLaunchSucceeded = await launch(
+      url,
+      forceSafariVC: false,
+      universalLinksOnly: true,
+    );
+    if (!nativeAppLaunchSucceeded) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: true,
+      );
+    }
+  }
 }
 
 class _IdentityLogoState extends State<IdentityLogo> {
@@ -282,7 +300,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -366,7 +387,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -450,7 +474,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -556,7 +583,9 @@ class _IdentityLogoState extends State<IdentityLogo> {
                             borderRadius: BorderRadius.circular(30),
                           ),
                           color: kPrimaryColor,
-                          onPressed: () {},
+                          onPressed: () {
+                            _launchUniversalLink('https://wa.me/+966532225562');
+                          },
                           child: Text(
                             'Pricing details',
                             style: TextStyle(color: Colors.white),
@@ -633,7 +662,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -697,7 +729,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -760,7 +795,10 @@ class _IdentityLogoState extends State<IdentityLogo> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),

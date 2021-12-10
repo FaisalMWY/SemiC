@@ -120,10 +120,10 @@ class RecomendPlantCard extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                            text: "$title\n".toUpperCase(),
+                            text: "$title\n",
                             style: Theme.of(context).textTheme.button),
                         TextSpan(
-                          text: "$country".toUpperCase(),
+                          text: "$country",
                           style: TextStyle(
                             color: kPrimaryColor.withOpacity(0.5),
                           ),

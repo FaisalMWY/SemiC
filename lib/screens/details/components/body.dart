@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
           ),
           ImageAndIcons(size: size),
           TitleAndPrice(
-            title: " ",
+            title: "App development",
             country: " ",
             //price: 440
           ),

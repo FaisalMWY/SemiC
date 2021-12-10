@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:plant_app/constants.dart';
 
 class MyHeaderDrawer extends StatefulWidget {
@@ -13,8 +14,7 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
         color: Colors.white,
         //color: kPrimaryColor,
         width: double.infinity,
-        height: 200,
-        padding: EdgeInsets.only(top: 20.0),
+        height: 300,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -22,8 +22,8 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
               decoration: BoxDecoration(
                 color: kPrimaryColor,
                 image: DecorationImage(
-                    image: AssetImage('assets/images/semi.png'),
-                    fit: BoxFit.cover),
+                    image: AssetImage('assets/images/semiksa_drawer.jpg'),
+                    fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(
 
                     // bottomLeft: Radius.circular(36),
@@ -31,7 +31,7 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
                     ),
               ),
               margin: EdgeInsets.only(bottom: 10),
-              height: 170,
+              height: 250,
               // decoration: BoxDecoration(
               //   shape: BoxShape.circle,
               //image: DecorationImage(
@@ -51,6 +51,18 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
             //     fontSize: 14,
             //   ),
             // )
+            // Center(
+            //   child: Row(
+            //     children: [
+            //       IconButton(
+            //           onPressed: () {}, icon: Icon(FontAwesomeIcons.whatsapp)),
+            //       IconButton(
+            //           onPressed: () {}, icon: Icon(FontAwesomeIcons.instagram)),
+            //       IconButton(
+            //           onPressed: () {}, icon: Icon(FontAwesomeIcons.twitter)),
+            //     ],
+            //   ),
+            // ),
           ],
         ));
   }

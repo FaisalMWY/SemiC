@@ -5,9 +5,11 @@ import '../../../constants.dart';
 class TitleWithMoreBtn extends StatelessWidget {
   const TitleWithMoreBtn({
     Key key,
+    this.size,
     this.title,
     this.press,
   }) : super(key: key);
+  final double size;
   final String title;
   final Function press;
 
@@ -17,7 +19,10 @@ class TitleWithMoreBtn extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Row(
         children: <Widget>[
-          TitleWithCustomUnderline(text: title),
+          TitleWithCustomUnderline(
+            text: title,
+            fontSize: size,
+          ),
           Spacer(),
           RaisedButton(
               shape: RoundedRectangleBorder(

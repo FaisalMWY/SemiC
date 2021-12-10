@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 
-class IconCard extends StatelessWidget {
+class IconCard extends StatefulWidget {
   const IconCard({
     Key key,
     this.icon,
@@ -11,6 +11,11 @@ class IconCard extends StatelessWidget {
 
   final String icon;
 
+  @override
+  State<IconCard> createState() => _IconCardState();
+}
+
+class _IconCardState extends State<IconCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,7 +40,7 @@ class IconCard extends StatelessWidget {
           ),
         ],
       ),
-      child: SvgPicture.asset(icon),
+      child: SvgPicture.asset(widget.icon),
     );
   }
 }

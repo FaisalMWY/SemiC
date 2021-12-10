@@ -2,10 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/features_screens/social_network_management.dart';
 import 'package:plant_app/screens/home/components/header_with_seachbox.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SallaManagement extends StatefulWidget {
   @override
   _SallaManagementState createState() => _SallaManagementState();
+}
+
+Future<void> _launchUniversalLink(String url) async {
+  if (await canLaunch(url)) {
+    final bool nativeAppLaunchSucceeded = await launch(
+      url,
+      forceSafariVC: false,
+      universalLinksOnly: true,
+    );
+    if (!nativeAppLaunchSucceeded) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: true,
+      );
+    }
+  }
 }
 
 class _SallaManagementState extends State<SallaManagement> {
@@ -316,7 +334,10 @@ class _SallaManagementState extends State<SallaManagement> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
@@ -432,7 +453,10 @@ class _SallaManagementState extends State<SallaManagement> {
                                   borderRadius: BorderRadius.circular(35),
                                 ),
                                 color: kPrimaryColor,
-                                onPressed: () {},
+                                onPressed: () {
+                                  _launchUniversalLink(
+                                      'https://wa.me/+966532225562');
+                                },
                                 child: Text(
                                   'Subscribe Here!',
                                   style: TextStyle(color: Colors.white),
