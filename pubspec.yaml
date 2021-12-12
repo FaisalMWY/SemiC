@@ -31,10 +31,11 @@ dependencies:
   cupertino_icons: ^0.1.3
   font_awesome_flutter: ^8.10.0
   community_material_icon: ^5.4.55
-  flutter_svg: ^0.19.1 #it helps us to use SVG
+  flutter_svg: ^0.22.0 #it helps us to use SVG
   expandable: ^5.0.1
   url_launcher: ^5.4.5
   awesome_dropdown: ^0.0.4
+  curved_navigation_bar: ^1.0.1
 
 dev_dependencies:
   flutter_test:

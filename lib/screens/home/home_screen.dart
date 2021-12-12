@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,9 +22,17 @@ class HomeScreen extends StatefulWidget {
 var currentpage = drawerSections.Home_page;
 
 class _HomeScreenState extends State<HomeScreen> {
+  int index = 2;
   @override
   Widget build(BuildContext context) {
     var container;
+    final items = <Widget>[
+      Icon(Icons.contacts, size: 20),
+      Icon(Icons.dashboard_outlined, size: 20),
+      Icon(Icons.home_rounded, size: 20),
+      Icon(Icons.import_contacts_outlined, size: 20),
+      Icon(Icons.people_alt_outlined, size: 20),
+    ];
     if (currentpage == drawerSections.Home_page) {
       container = Body();
     } else if (currentpage == drawerSections.about_us) {
@@ -36,9 +45,22 @@ class _HomeScreenState extends State<HomeScreen> {
       container = ContactUs();
     }
 
+    if (index == 2) {
+      container = Body();
+    } else if (index == 0) {
+      container = AboutUs();
+    } else if (index == 1) {
+      container = FeaturesAndServices();
+    } else if (index == 3) {
+      container = OurResume();
+    } else if (index == 4) {
+      container = ContactUs();
+    }
+
     return Scaffold(
       appBar: buildAppBar(),
       body: container,
+      extendBody: true,
       floatingActionButton: FloatingActionButton(
           backgroundColor: kPrimaryColor,
           child: Icon(
@@ -63,6 +85,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        buttonBackgroundColor: kPrimaryColor,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 400),
+        index: index,
+        height: 50,
+        items: items,
+        onTap: (index) => setState(() => this.index = index),
       ),
     );
   }
