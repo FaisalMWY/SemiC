@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 400),
         index: index,
-        height: 50,
+        height: 40,
         items: items,
         onTap: (index) => setState(() => this.index = index),
       ),

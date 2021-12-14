@@ -13,7 +13,7 @@ class WhoAreWeCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20, right: 20),
       child: SizedBox(
         width: 242,
         height: 100,

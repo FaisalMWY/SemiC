@@ -1,9 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/home/components/about_semi.dart';
+import 'package:plant_app/screens/home/components/highlights_cards.dart';
+import 'package:plant_app/screens/home/components/home_header.dart';
+import 'package:plant_app/screens/home/components/icon_btn_with_counter.dart';
+import 'package:plant_app/screens/home/components/highlights_card.dart';
+import 'package:plant_app/screens/home/components/search_field.dart';
 import 'package:plant_app/screens/home/components/services.dart';
 import 'package:plant_app/screens/home/components/top_banner.dart';
 import 'package:flutter/widgets.dart';
+import 'package:plant_app/screens/home/components/who_are_we.dart';
 import '../home_screen.dart';
 
 class Body extends StatefulWidget {
@@ -18,36 +27,16 @@ class _BodyState extends State<Body> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  Container(
-                    width: 240,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: kPrimaryColor.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hoverColor: Colors.black,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
+            HomeHeader(),
+            SizedBox(height: 30),
             TopBanner(),
             SizedBox(height: 30),
             AboutSemi(),
             SizedBox(height: 30),
             Services(),
+            SizedBox(height: 20),
+            HighlightsCards(),
           ],
         ),
       ),

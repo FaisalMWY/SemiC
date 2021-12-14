@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plant_app/constants.dart';
 
 class WhoAreWe extends StatelessWidget {
@@ -18,12 +19,15 @@ class WhoAreWe extends StatelessWidget {
         children: [
           Text(
             text,
-            style: TextStyle(fontSize: 18, color: kTextColor),
+            style: GoogleFonts.poppins(
+              textStyle: TextStyle(
+                fontSize: 18,
+                color: kTextColor,
+              ),
+            ),
           ),
           GestureDetector(
-            onTap: () {
-              print('hi');
-            },
+            onTap: () {},
             child: Text(buttonText),
           ),
         ],
