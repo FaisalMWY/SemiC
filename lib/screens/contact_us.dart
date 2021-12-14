@@ -57,7 +57,7 @@ class _ContactUsState extends State<ContactUs> {
             child: Row(
               children: [
                 RecomendPlantCard(
-                  image: "assets/images/outlook_.png",
+                  image: "assets/images/outlook_3.png",
                   title: "Email",
                   country: "Info@semiksa.com",
                   // price: 1400,

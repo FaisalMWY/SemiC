@@ -1,8 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-//import 'package:plant_app/components/my_bottom_nav_bar.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/my_header_drawer.dart';
 import 'package:plant_app/screens/contact_us.dart';
@@ -27,11 +25,37 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var container;
     final items = <Widget>[
-      Icon(Icons.contacts, size: 20),
-      Icon(Icons.dashboard_outlined, size: 20),
-      Icon(Icons.home_rounded, size: 20),
-      Icon(Icons.import_contacts_outlined, size: 20),
-      Icon(Icons.people_alt_outlined, size: 20),
+      SvgPicture.asset(
+        'assets/icons/about_us.svg',
+        height: 28,
+        width: 28,
+      ),
+      SvgPicture.asset(
+        'assets/icons/services.svg',
+        height: 28,
+        width: 28,
+      ),
+      SvgPicture.asset(
+        'assets/icons/home.svg',
+        height: 28,
+        width: 28,
+      ),
+      SvgPicture.asset(
+        'assets/icons/our_work.svg',
+        height: 28,
+        width: 28,
+      ),
+      SvgPicture.asset(
+        'assets/icons/contact_us.svg',
+        height: 28,
+        width: 28,
+      ),
+
+      // Icon(Icons.contacts, size: 20),
+      // Icon(Icons.dashboard_outlined, size: 20),
+      // Icon(Icons.home_rounded, size: 20),
+      // Icon(Icons.import_contacts_outlined, size: 20),
+      // Icon(Icons.people_alt_outlined, size: 20),
     ];
     if (currentpage == drawerSections.Home_page) {
       container = Body();
@@ -58,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return Scaffold(
-      appBar: buildAppBar(),
+      //appBar: buildAppBar(),
       body: container,
       extendBody: true,
       floatingActionButton: FloatingActionButton(

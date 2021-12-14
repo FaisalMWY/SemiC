@@ -1,12 +1,9 @@
-import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
-import 'package:plant_app/screens/home/components/underlined_title.dart';
-
-import 'featurred_plants.dart';
-import 'header_with_seachbox.dart';
-import 'recomend_plants.dart';
-import 'title_with_more_bbtn.dart';
+import 'package:plant_app/screens/home/components/about_semi.dart';
+import 'package:plant_app/screens/home/components/services.dart';
+import 'package:plant_app/screens/home/components/top_banner.dart';
+import 'package:flutter/widgets.dart';
 import '../home_screen.dart';
 
 class Body extends StatefulWidget {
@@ -17,39 +14,42 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    // It will provie us total height  and width of our screen
-    Size size = MediaQuery.of(context).size;
-
-    // it enable scrolling on small device
-    return SingleChildScrollView(
-      controller: controller,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          HeaderWithSearchBox(),
-          // ListView(
-          //   children: [
-          //     buildCard('Who are we?'),
-          //   ],
-          // ),
-          FeaturedPlants(),
-          UnderlinedTitle(title: "Who are we", press: () {}),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            child: Text(
-              'A passionate team that aims to empower entrepreneurs to start their e-commerce by providing several services consisting of a team with innovative technical and marketing expertise.',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 240,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hoverColor: Colors.black,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          UnderlinedTitle(title: "Our services", press: () {}),
-          RecomendsPlants(),
-          //UnderlinedTitle(title: "learn more in our website", press: () {}),
-
-          SizedBox(height: kDefaultPadding),
-        ],
+            SizedBox(height: 10),
+            TopBanner(),
+            SizedBox(height: 30),
+            AboutSemi(),
+            SizedBox(height: 30),
+            Services(),
+          ],
+        ),
       ),
     );
   }
@@ -59,20 +59,4 @@ class _BodyState extends State<Body> {
     controller.animateTo(start,
         duration: Duration(seconds: 1), curve: Curves.easeIn);
   }
-
-  // Widget buildCard(String title) => Padding(
-  //       padding: EdgeInsets.all(10),
-  //       child: Card(
-  //         child: ExpandablePanel(
-  //           header: Text(
-  //             title,
-  //             style: TextStyle(fontWeight: FontWeight.bold),
-  //           ),
-  //           collapsed: Text('A passionate team that aims to '),
-  //           expanded: Text(
-  //             'A passionate team that aims to empower entrepreneurs to start their e-commerce by providing several services consisting of a team with innovative technical and marketing expertise.',
-  //           ),
-  //         ),
-  //       ),
-  //     );
 }
