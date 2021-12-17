@@ -365,10 +365,10 @@
       "name": "plant_app",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.11"
     }
   ],
-  "generated": "2021-12-14T16:09:34.236967Z",
+  "generated": "2021-12-17T11:56:57.803593Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

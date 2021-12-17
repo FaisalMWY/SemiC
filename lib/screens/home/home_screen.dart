@@ -3,12 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/my_header_drawer.dart';
-import 'package:plant_app/screens/contact_us.dart';
-import 'package:plant_app/screens/features_an_services.dart';
+import 'package:plant_app/screens/features_and_services/features_and_services.dart';
 import 'package:plant_app/screens/home/components/body.dart';
-import 'package:plant_app/screens/our_resume.dart';
-
-import '../about_us.dart';
 
 final controller = ScrollController();
 
@@ -60,25 +56,25 @@ class _HomeScreenState extends State<HomeScreen> {
     if (currentpage == drawerSections.Home_page) {
       container = Body();
     } else if (currentpage == drawerSections.about_us) {
-      container = AboutUs();
+      // container = AboutUs();
     } else if (currentpage == drawerSections.features_and_services) {
       container = FeaturesAndServices();
     } else if (currentpage == drawerSections.our_resume) {
-      container = OurResume();
+      // container = OurResume();
     } else if (currentpage == drawerSections.contact_us) {
-      container = ContactUs();
+      // container = ContactUs();
     }
 
     if (index == 2) {
       container = Body();
     } else if (index == 0) {
-      container = AboutUs();
+      // container = AboutUs();
     } else if (index == 1) {
       container = FeaturesAndServices();
     } else if (index == 3) {
-      container = OurResume();
+      // container = OurResume();
     } else if (index == 4) {
-      container = ContactUs();
+      // container = ContactUs();
     }
 
     return Scaffold(
@@ -116,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 400),
         index: index,
-        height: 40,
+        height: 50,
         items: items,
         onTap: (index) => setState(() => this.index = index),
       ),

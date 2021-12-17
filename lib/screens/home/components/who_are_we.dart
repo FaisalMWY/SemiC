@@ -13,7 +13,7 @@ class WhoAreWe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -26,10 +26,11 @@ class WhoAreWe extends StatelessWidget {
               ),
             ),
           ),
-          GestureDetector(
-            onTap: () {},
-            child: Text(buttonText),
-          ),
+          if (buttonText != null)
+            GestureDetector(
+              onTap: () {},
+              child: Text(buttonText),
+            ),
         ],
       ),
     );
