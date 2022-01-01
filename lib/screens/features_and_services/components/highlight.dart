@@ -15,33 +15,31 @@ class Highlights extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 20),
-      child: SizedBox(
-        width: 300,
-        height: 180,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Stack(
-            children: [
-              // Image.asset(
-              //   image,
-              //   width: 242,
-              //   fit: BoxFit.cover,
-              // ),
-              Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF343434).withOpacity(.4),
-                      Color(0xFF343434).withOpacity(.15)
-                    ],
-                  ),
+    return SizedBox(
+      width: double.infinity,
+      height: 160,
+      child: ClipRRect(
+        child: Stack(
+          children: [
+            // Image.asset(
+            //   image,
+            //   width: 242,
+            //   fit: BoxFit.cover,
+            // ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    kPrimaryColor.withOpacity(.4),
+                    kSecondaryColor.withOpacity(.15)
+                  ],
                 ),
               ),
-              Padding(
+            ),
+            Center(
+              child: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: Text.rich(
@@ -51,7 +49,7 @@ class Highlights extends StatelessWidget {
                       TextSpan(
                         text: '$title',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -59,9 +57,9 @@ class Highlights extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

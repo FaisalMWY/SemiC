@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/features_and_services/components/Identity_and_logo.dart';
 
 class PlanList extends StatefulWidget {
   PlanList({
@@ -12,23 +13,22 @@ class PlanList extends StatefulWidget {
 class _PlanListState extends State<PlanList> {
   int selectedPlan = 0;
   List<String> plans = [
-    'Identity & Logo Plans',
-    'Application Plans',
-    'Website Plans',
-    'Salla Plans',
-    'Social Media Plans',
-    'Marketing Plans'
+    'باقات الشعار والهوية',
+    'باقت التطبيقات',
+    'باقات المواقع',
+    'باقات سلة',
+    'باقات التواصل الاجتماعي',
+    'باقات التسويق'
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-
       height: 60,
       child: Center(
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
+          reverse: true,
           itemCount: plans.length,
           itemBuilder: (context, index) => buildPlan(index, context),
         ),
@@ -43,10 +43,11 @@ class _PlanListState extends State<PlanList> {
         onTap: () {
           setState(() {
             selectedPlan = index;
+            print(selectedPlan);
           });
         },
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             Text(
               plans[index],

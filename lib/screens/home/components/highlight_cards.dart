@@ -10,23 +10,24 @@ class HighlightsCards extends StatelessWidget {
     return Column(
       children: [
         WhoAreWe(
-          text: 'Highlights',
+          text: 'امور تهمك',
           press: () {},
-          buttonText: 'Our Work',
+          buttonText: 'اعمالنا',
         ),
         SizedBox(height: 20),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
+          reverse: true,
           child: Row(
             children: [
               Highlights(
-                  title: 'Upto 50% discount on our plans!',
-                  image: 'assets/images/semi_1.jpg',
+                  title: 'الهوية البصرية',
+                  image: 'assets/images/our_work.jpg',
                   quote: '',
                   press: () {}),
               Highlights(
-                  title: 'Identity Design',
-                  image: 'assets/images/our_work.jpg',
+                  title: '%خصومات تصل الى 50',
+                  image: 'assets/images/semi_1.jpg',
                   quote: '',
                   press: () {}),
             ],

@@ -16,14 +16,15 @@ class SearchField extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextField(
+        textAlign: TextAlign.right,
         onChanged: (value) {},
         decoration: InputDecoration(
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
-          hintText: 'Search for plans',
-          prefixIcon: Icon(Icons.search),
+          hintText: 'ابحث عن خدماتنا هنا',
+          suffixIcon: Icon(Icons.search),
           contentPadding: EdgeInsets.symmetric(
-            horizontal: 20,
+            horizontal: 5,
             vertical: 9,
           ),
         ),

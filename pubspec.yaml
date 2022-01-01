@@ -16,7 +16,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 #version: 1.0.0+1
-version: 2.5.3
+version: 2.8.0
 
 environment:
   sdk: ">=2.11.0 <3.0.0"
@@ -38,6 +38,9 @@ dependencies:
   curved_navigation_bar: ^1.0.1
   provider: ^6.0.1
   google_fonts: ^2.1.0
+  scrollable_positioned_list: ^0.1.10
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:

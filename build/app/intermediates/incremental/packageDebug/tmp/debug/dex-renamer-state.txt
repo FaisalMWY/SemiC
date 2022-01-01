@@ -1,4 +1,4 @@
-#Fri Dec 17 15:07:01 AST 2021
-base.0=C\:\\Users\\Dan\\Development\\Projects\\semi-c-master\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sat Jan 01 07:29:36 AST 2022
+base.0=C\:\\Users\\Dan\\Development\\Projects\\SemiC\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

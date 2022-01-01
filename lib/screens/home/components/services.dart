@@ -6,19 +6,19 @@ class Services extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> services = [
-      {'icon': 'assets/icons/app.svg', 'text': 'App'},
-      {'icon': 'assets/icons/web.svg', 'text': 'Web'},
-      {'icon': 'assets/icons/design.svg', 'text': 'Design'},
-      {'icon': 'assets/icons/ads.svg', 'text': 'ADs'},
-      {'icon': 'assets/icons/social.svg', 'text': 'Social'},
-      {'icon': 'assets/icons/salla.svg', 'text': 'Salla'},
+      {'icon': 'assets/icons/app.svg', 'text': 'تطبيقات'},
+      {'icon': 'assets/icons/web.svg', 'text': 'مواقع'},
+      {'icon': 'assets/icons/design.svg', 'text': 'تصميم'},
+      {'icon': 'assets/icons/ads.svg', 'text': 'اعلانات'},
+      {'icon': 'assets/icons/social.svg', 'text': 'التواصل اجتماعي'},
+      {'icon': 'assets/icons/salla.svg', 'text': 'سله'},
     ];
     return Column(
       children: [
         WhoAreWe(
-          text: 'Our Services',
+          text: 'خدماتنا',
           press: () {},
-          buttonText: 'Services Page',
+          buttonText: 'صفحة الخدمات',
         ),
         SizedBox(height: 20),
         Padding(

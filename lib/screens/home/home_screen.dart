@@ -162,21 +162,21 @@ class MyDrawerList extends StatelessWidget {
       ),
       child: Column(
         children: [
-          menuItem(1, 'Home page', Icons.home_rounded,
+          menuItem(1, 'الصفحة الرئيسية', Icons.home_rounded,
               currentpage == drawerSections.Home_page ? true : false, context),
-          menuItem(2, 'About us', Icons.contacts,
+          menuItem(2, 'المزيد عنا', Icons.contacts,
               currentpage == drawerSections.about_us ? true : false, context),
           menuItem(
               3,
-              'Features & services',
+              'خدماتنا',
               Icons.dashboard_outlined,
               currentpage == drawerSections.features_and_services
                   ? true
                   : false,
               context),
-          menuItem(4, 'Our resume', Icons.import_contacts_outlined,
+          menuItem(4, 'اعمالنا', Icons.import_contacts_outlined,
               currentpage == drawerSections.our_resume ? true : false, context),
-          menuItem(5, 'Contact us', Icons.people_alt_outlined,
+          menuItem(5, 'تواصل معنا', Icons.people_alt_outlined,
               currentpage == drawerSections.contact_us ? true : false, context),
         ],
       ),

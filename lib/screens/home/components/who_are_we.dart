@@ -17,6 +17,11 @@ class WhoAreWe extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          if (buttonText != null)
+            GestureDetector(
+              onTap: () {},
+              child: Text(buttonText),
+            ),
           Text(
             text,
             style: GoogleFonts.poppins(
@@ -26,11 +31,6 @@ class WhoAreWe extends StatelessWidget {
               ),
             ),
           ),
-          if (buttonText != null)
-            GestureDetector(
-              onTap: () {},
-              child: Text(buttonText),
-            ),
         ],
       ),
     );

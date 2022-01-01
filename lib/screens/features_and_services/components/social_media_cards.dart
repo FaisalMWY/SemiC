@@ -18,7 +18,7 @@ class SocialMediaCards extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            // flex: 2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

@@ -15,17 +15,17 @@ class HomeHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SearchField(),
-          IconBtnWithCounter(
-            icon: CupertinoIcons.cart,
-            numOfItems: 0,
-            press: () {},
-          ),
           IconBtnWithCounter(
             icon: CupertinoIcons.bell,
             numOfItems: 0,
             press: () {},
           ),
+          IconBtnWithCounter(
+            icon: CupertinoIcons.cart,
+            numOfItems: 0,
+            press: () {},
+          ),
+          SearchField(),
         ],
       ),
     );

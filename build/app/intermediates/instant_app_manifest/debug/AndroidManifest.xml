@@ -3,7 +3,7 @@
     package="com.example.plant_app"
     android:targetSandboxVersion="2"
     android:versionCode="1"
-    android:versionName="2.5.3" >
+    android:versionName="2.8.0" >
 
     <uses-sdk
         android:minSdkVersion="16"

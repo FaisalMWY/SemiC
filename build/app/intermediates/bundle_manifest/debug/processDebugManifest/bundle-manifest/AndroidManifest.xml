@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.plant_app"
     android:versionCode="1"
-    android:versionName="2.5.3" >
+    android:versionName="2.8.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
