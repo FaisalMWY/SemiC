@@ -53,17 +53,17 @@ class _HomeScreenState extends State<HomeScreen> {
       // Icon(Icons.import_contacts_outlined, size: 20),
       // Icon(Icons.people_alt_outlined, size: 20),
     ];
-    if (currentpage == drawerSections.Home_page) {
-      container = Body();
-    } else if (currentpage == drawerSections.about_us) {
-      // container = AboutUs();
-    } else if (currentpage == drawerSections.features_and_services) {
-      container = FeaturesAndServices();
-    } else if (currentpage == drawerSections.our_resume) {
-      // container = OurResume();
-    } else if (currentpage == drawerSections.contact_us) {
-      // container = ContactUs();
-    }
+    // if (currentpage == drawerSections.Home_page) {
+    //   container = Body();
+    // } else if (currentpage == drawerSections.about_us) {
+    //   // container = AboutUs();
+    // } else if (currentpage == drawerSections.features_and_services) {
+    //   container = FeaturesAndServices();
+    // } else if (currentpage == drawerSections.our_resume) {
+    //   // container = OurResume();
+    // } else if (currentpage == drawerSections.contact_us) {
+    //   // container = ContactUs();
+    // }
 
     if (index == 2) {
       container = Body();

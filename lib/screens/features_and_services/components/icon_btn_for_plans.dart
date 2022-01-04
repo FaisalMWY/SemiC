@@ -29,30 +29,6 @@ class IconBtnForPlans extends StatelessWidget {
             ),
             child: Icon(icon),
           ),
-          if (numOfItems != 0)
-            Positioned(
-              top: -3,
-              right: 0,
-              child: Container(
-                height: 16,
-                width: 16,
-                decoration: BoxDecoration(
-                  color: Color(0xFFFF4848),
-                  shape: BoxShape.circle,
-                ),
-                child: Center(
-                  child: Text(
-                    '$numOfItems',
-                    style: TextStyle(
-                      fontSize: 10,
-                      height: 1,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
         ],
       ),
     );

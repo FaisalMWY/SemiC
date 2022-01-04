@@ -12,26 +12,29 @@ class WhoAreWe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          if (buttonText != null)
-            GestureDetector(
-              onTap: () {},
-              child: Text(buttonText),
-            ),
-          Text(
-            text,
-            style: GoogleFonts.poppins(
-              textStyle: TextStyle(
-                fontSize: 18,
-                color: kTextColor,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            if (buttonText != null)
+              GestureDetector(
+                onTap: () {},
+                child: Text(buttonText),
+              ),
+            Text(
+              text,
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  fontSize: 18,
+                  color: kTextColor,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
