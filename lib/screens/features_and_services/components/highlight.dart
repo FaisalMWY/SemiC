@@ -17,7 +17,7 @@ class Highlights extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 160,
+      height: 260,
       child: ClipRRect(
         child: Stack(
           children: [

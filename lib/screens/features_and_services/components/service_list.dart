@@ -23,26 +23,6 @@ class _ServiceListState extends State<ServiceList> {
 
   @override
   Widget build(BuildContext context) {
-    var container;
-
-    if (selectedPlan == 0) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => IdentityAndLogoPlans(),
-        ),
-      );
-    } else if (selectedPlan == 1) {
-      // container = AboutUs();
-    } else if (selectedPlan == 2) {
-      // container = FeaturesAndServices();
-    } else if (selectedPlan == 3) {
-      // container = OurResume();
-    } else if (selectedPlan == 4) {
-      // container = ContactUs();
-    } else if (selectedPlan == 5) {
-      // container = ContactUs();
-    }
     return Container(
       height: 60,
       child: Center(
@@ -57,12 +37,32 @@ class _ServiceListState extends State<ServiceList> {
   }
 
   Padding buildPlan(int index, BuildContext context) {
+    var container;
+
+    if (selectedPlan == 0) {
+      container = IdentityAndLogoPlans();
+    } else if (selectedPlan == 1) {
+      // container = AboutUs();
+    } else if (selectedPlan == 2) {
+      // container = FeaturesAndServices();
+    } else if (selectedPlan == 3) {
+      // container = OurResume();
+    } else if (selectedPlan == 4) {
+      // container = ContactUs();
+    } else if (selectedPlan == 5) {
+      // container = ContactUs();
+    }
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 1.5),
       child: GestureDetector(
         onTap: () {
           setState(() {
             selectedPlan = index;
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => container),
+            );
           });
         },
         child: Column(
