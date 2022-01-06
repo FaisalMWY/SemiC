@@ -7,13 +7,15 @@ class WebPlans extends StatelessWidget {
   const WebPlans({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return Container(
+      height: 547,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'سرعة', press: () {}, quote: ''),
+              Highlights(title: 'انتصار', press: () {}, quote: ''),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               SizedBox(height: 20),

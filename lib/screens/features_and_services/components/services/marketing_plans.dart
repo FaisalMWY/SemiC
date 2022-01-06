@@ -7,13 +7,15 @@ class MarketingPlans extends StatelessWidget {
   const MarketingPlans({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return Container(
+      height: 547,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'انتشار', press: () {}, quote: ''),
+              Highlights(title: 'عزيمة', press: () {}, quote: ''),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               SizedBox(height: 20),

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
-import './sevice_controller.dart';
+import 'package:plant_app/screens/features_and_services/components/services/app_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/identity_and_logo_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/marketing_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/sallah_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/social_media.dart';
+import 'package:plant_app/screens/features_and_services/components/services/web_plans.dart';
 
 class ServiceList extends StatefulWidget {
   ServiceList({
@@ -11,6 +16,7 @@ class ServiceList extends StatefulWidget {
 }
 
 int selectedPlan = 0;
+var container;
 
 class _ServiceListState extends State<ServiceList> {
   List<String> plans = [
@@ -24,34 +30,38 @@ class _ServiceListState extends State<ServiceList> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      child: Center(
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          reverse: true,
-          itemCount: plans.length,
-          itemBuilder: (context, index) => buildPlan(index, context),
+    if (selectedPlan == 0) {
+      container = IdentityAndLogoPlans();
+    } else if (selectedPlan == 1) {
+      container = AppPlans();
+    } else if (selectedPlan == 2) {
+      container = WebPlans();
+    } else if (selectedPlan == 3) {
+      container = SallahPlans();
+    } else if (selectedPlan == 4) {
+      container = SocialMediaPlans();
+    } else if (selectedPlan == 5) {
+      container = MarketingPlans();
+    }
+    return Column(
+      children: [
+        Container(
+          height: 60,
+          child: Center(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              reverse: true,
+              itemCount: plans.length,
+              itemBuilder: (context, index) => buildPlan(index, context),
+            ),
+          ),
         ),
-      ),
+        container
+      ],
     );
   }
 
   Padding buildPlan(int index, BuildContext context) {
-    if (pageChanged == 0) {
-      selectedPlan = 0;
-    } else if (pageChanged == 1) {
-      selectedPlan = 1;
-    } else if (pageChanged == 2) {
-      selectedPlan = 2;
-    } else if (pageChanged == 3) {
-      selectedPlan = 3;
-    } else if (pageChanged == 4) {
-      selectedPlan = 4;
-    } else if (pageChanged == 5) {
-      selectedPlan = 5;
-    }
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 1.5),
       child: GestureDetector(
