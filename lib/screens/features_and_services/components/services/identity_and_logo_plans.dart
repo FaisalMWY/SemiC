@@ -16,10 +16,6 @@ class IdentityAndLogoPlans extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20),
-              HomeHeader(),
-              SizedBox(height: 30),
-              ServiceList(),
               Highlights(title: 'ابداع', press: () {}, quote: ''),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
-import 'package:plant_app/screens/features_and_services/components/services/identity_and_logo_plans.dart';
+import './sevice_controller.dart';
 
 class ServiceList extends StatefulWidget {
   ServiceList({
@@ -10,8 +10,9 @@ class ServiceList extends StatefulWidget {
   _ServiceListState createState() => _ServiceListState();
 }
 
+int selectedPlan = 0;
+
 class _ServiceListState extends State<ServiceList> {
-  int selectedPlan = 0;
   List<String> plans = [
     'باقات الشعار والهوية',
     'باقات التطبيقات',
@@ -37,20 +38,18 @@ class _ServiceListState extends State<ServiceList> {
   }
 
   Padding buildPlan(int index, BuildContext context) {
-    var container;
-
-    if (selectedPlan == 0) {
-      container = IdentityAndLogoPlans();
-    } else if (selectedPlan == 1) {
-      // container = AboutUs();
-    } else if (selectedPlan == 2) {
-      // container = FeaturesAndServices();
-    } else if (selectedPlan == 3) {
-      // container = OurResume();
-    } else if (selectedPlan == 4) {
-      // container = ContactUs();
-    } else if (selectedPlan == 5) {
-      // container = ContactUs();
+    if (pageChanged == 0) {
+      selectedPlan = 0;
+    } else if (pageChanged == 1) {
+      selectedPlan = 1;
+    } else if (pageChanged == 2) {
+      selectedPlan = 2;
+    } else if (pageChanged == 3) {
+      selectedPlan = 3;
+    } else if (pageChanged == 4) {
+      selectedPlan = 4;
+    } else if (pageChanged == 5) {
+      selectedPlan = 5;
     }
 
     return Padding(
@@ -59,10 +58,6 @@ class _ServiceListState extends State<ServiceList> {
         onTap: () {
           setState(() {
             selectedPlan = index;
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => container),
-            );
           });
         },
         child: Column(
@@ -85,7 +80,7 @@ class _ServiceListState extends State<ServiceList> {
                     ? kSecondaryColor
                     : Colors.transparent,
               ),
-            )
+            ),
           ],
         ),
       ),

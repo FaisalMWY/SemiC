@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app/screens/features_and_services/components/highlight.dart';
-import 'package:plant_app/screens/features_and_services/components/plan_list.dart';
 import 'package:plant_app/screens/features_and_services/components/service_list.dart';
+import 'package:plant_app/screens/features_and_services/components/sevice_controller.dart';
 import 'package:plant_app/screens/home/components/home_header.dart';
-import 'package:plant_app/screens/home/components/who_are_we.dart';
 
 class FeaturesAndServices extends StatelessWidget {
   const FeaturesAndServices({Key key}) : super(key: key);
@@ -20,11 +18,7 @@ class FeaturesAndServices extends StatelessWidget {
               HomeHeader(),
               SizedBox(height: 30),
               ServiceList(),
-              Highlights(title: 'ابداع', press: () {}, quote: ''),
-              SizedBox(height: 30),
-              WhoAreWe(text: 'الباقات', press: () {}),
-              SizedBox(height: 20),
-              PlanList(),
+              ServicesController(),
             ],
           ),
         ),
