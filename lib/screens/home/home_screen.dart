@@ -5,6 +5,8 @@ import 'package:plant_app/constants.dart';
 import 'package:plant_app/my_header_drawer.dart';
 import 'package:plant_app/screens/features_and_services/features_and_services.dart';
 import 'package:plant_app/screens/home/components/body.dart';
+import 'package:plant_app/screens/profile/profile_screen.dart';
+// import 'package:plant_app/screens/profile/profile_screen.dart';
 
 final controller = ScrollController();
 
@@ -22,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var container;
     final items = <Widget>[
       SvgPicture.asset(
-        'assets/icons/about_us.svg',
+        'assets/icons/our_work.svg',
         height: 28,
         width: 28,
       ),
@@ -37,33 +39,17 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 28,
       ),
       SvgPicture.asset(
-        'assets/icons/our_work.svg',
-        height: 28,
-        width: 28,
-      ),
-      SvgPicture.asset(
         'assets/icons/contact_us.svg',
         height: 28,
         width: 28,
       ),
-
-      // Icon(Icons.contacts, size: 20),
-      // Icon(Icons.dashboard_outlined, size: 20),
-      // Icon(Icons.home_rounded, size: 20),
-      // Icon(Icons.import_contacts_outlined, size: 20),
-      // Icon(Icons.people_alt_outlined, size: 20),
+      SvgPicture.asset(
+        'assets/icons/User Icon.svg',
+        height: 28,
+        width: 28,
+        color: Color(0xFF000000),
+      ),
     ];
-    // if (currentpage == drawerSections.Home_page) {
-    //   container = Body();
-    // } else if (currentpage == drawerSections.about_us) {
-    //   // container = AboutUs();
-    // } else if (currentpage == drawerSections.features_and_services) {
-    //   container = FeaturesAndServices();
-    // } else if (currentpage == drawerSections.our_resume) {
-    //   // container = OurResume();
-    // } else if (currentpage == drawerSections.contact_us) {
-    //   // container = ContactUs();
-    // }
 
     if (index == 2) {
       container = Body();
@@ -74,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else if (index == 3) {
       // container = OurResume();
     } else if (index == 4) {
-      // container = ContactUs();
+      container = ProfileScreen();
     }
 
     return Scaffold(

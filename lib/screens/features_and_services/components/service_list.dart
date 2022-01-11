@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
-import 'package:plant_app/screens/features_and_services/components/services/app_plans.dart';
-import 'package:plant_app/screens/features_and_services/components/services/identity_and_logo_plans.dart';
-import 'package:plant_app/screens/features_and_services/components/services/marketing_plans.dart';
-import 'package:plant_app/screens/features_and_services/components/services/sallah_plans.dart';
-import 'package:plant_app/screens/features_and_services/components/services/social_media.dart';
-import 'package:plant_app/screens/features_and_services/components/services/web_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/app_plans/app_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/identity_and_logo_plans/identity_and_logo_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/marketing_plans/marketing_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/sallah_plans/sallah_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/social_media_plans/social_media_plans.dart';
+import 'package:plant_app/screens/features_and_services/components/services/web_plans/web_plans.dart';
 
 class ServiceList extends StatefulWidget {
   ServiceList({

@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plant_app/constants.dart';
-import 'package:plant_app/screens/features_and_services/components/icon_btn_for_plans.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class PlanCards extends StatelessWidget {
   const PlanCards(
@@ -22,7 +20,7 @@ class PlanCards extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: SizedBox(
         width: double.infinity,
-        height: 90,
+        height: 100,
         child: ClipRRect(
           child: Stack(
             children: [
@@ -32,8 +30,8 @@ class PlanCards extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
                     image,
-                    width: 60,
-                    height: 60,
+                    width: 75,
+                    height: 75,
                   ),
                 ),
               ),
@@ -60,22 +58,18 @@ class PlanCards extends StatelessWidget {
               Row(
                 children: [
                   SizedBox(
-                    width: 10,
-                  ),
-                  SizedBox(
-                    width: 65,
+                    width: 90,
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 20),
+                      SizedBox(height: 15),
                       Text.rich(
                         TextSpan(
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text:
-                                  '$title                                              ',
+                              text: '$title',
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
@@ -85,7 +79,7 @@ class PlanCards extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 240,
+                        width: 280,
                         child: Text(
                           description,
                           style: GoogleFonts.poppins(
