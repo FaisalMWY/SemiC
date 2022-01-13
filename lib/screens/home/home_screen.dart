@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: container,
       extendBody: true,
       floatingActionButton: FloatingActionButton(
-          backgroundColor: kPrimaryColor,
+          backgroundColor: kSecondaryColor,
           child: Icon(
             Icons.arrow_upward,
           ),

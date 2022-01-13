@@ -7,15 +7,21 @@ class SocialMediaPlans extends StatelessWidget {
   const SocialMediaPlans({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final List<String> imgList = [
+      'assets/images/social_media_1.png',
+      'assets/images/social_media.png'
+    ];
     return Container(
-      height: 547,
+      height: 520,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'سرعة', press: () {}, quote: ''),
+              Highlights(
+                image: imgList,
+              ),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               PlanList(),

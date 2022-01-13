@@ -4,8 +4,10 @@ import './plan_list.dart';
 import 'package:plant_app/screens/home/components/who_are_we.dart';
 
 class IdentityAndLogoPlans extends StatelessWidget {
-  const IdentityAndLogoPlans({Key key}) : super(key: key);
-
+  final List<String> imgList = [
+    'assets/images/identity_1.jpg',
+    'assets/images/identity.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +18,9 @@ class IdentityAndLogoPlans extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'شغفنا إرضاؤكم', press: () {}, quote: ''),
+              Highlights(
+                image: imgList,
+              ),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               PlanList(),

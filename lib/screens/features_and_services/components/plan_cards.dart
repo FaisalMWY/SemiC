@@ -24,27 +24,9 @@ class PlanCards extends StatelessWidget {
         child: ClipRRect(
           child: Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    image,
-                    width: 75,
-                    height: 75,
-                  ),
-                ),
-              ),
               Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      kPrimaryColor.withOpacity(.4),
-                      kSecondaryColor.withOpacity(.15)
-                    ],
-                  ),
+                  color: kThirdColor,
                 ),
               ),
               // SizedBox(
@@ -57,8 +39,16 @@ class PlanCards extends StatelessWidget {
               // ),
               Row(
                 children: [
-                  SizedBox(
-                    width: 90,
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        image,
+                        width: 70,
+                        height: 70,
+                      ),
+                    ),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,12 +69,12 @@ class PlanCards extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 280,
+                        width: 270,
                         child: Text(
                           description,
                           style: GoogleFonts.poppins(
                             textStyle: TextStyle(
-                              color: kTextColor.withOpacity(.8),
+                              color: Colors.white,
                             ),
                           ),
                         ),

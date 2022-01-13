@@ -19,7 +19,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       body: Body(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kSecondaryColor,
         child: Icon(
           CupertinoIcons.trash_fill,
           size: 35,

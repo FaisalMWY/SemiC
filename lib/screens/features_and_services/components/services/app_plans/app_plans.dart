@@ -4,19 +4,24 @@ import 'package:plant_app/screens/features_and_services/components/services/app_
 import 'package:plant_app/screens/home/components/who_are_we.dart';
 
 class AppPlans extends StatelessWidget {
-  const AppPlans({Key key}) : super(key: key);
-
+  final List<String> imgList = [
+    'assets/images/app_our_work.png',
+    'assets/images/application.png'
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 547,
+      height: 500,
+      width: double.infinity,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'ابداع', press: () {}, quote: ''),
+              Highlights(
+                image: imgList,
+              ),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               PlanList(),

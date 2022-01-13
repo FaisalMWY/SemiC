@@ -7,15 +7,21 @@ class WebPlans extends StatelessWidget {
   const WebPlans({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final List<String> imgList = [
+      'assets/images/web_ui.png',
+      'assets/images/web_ui_1.jpg'
+    ];
     return Container(
-      height: 547,
+      height: 520,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Highlights(title: 'انتصار', press: () {}, quote: ''),
+              Highlights(
+                image: imgList,
+              ),
               SizedBox(height: 30),
               WhoAreWe(text: 'الباقات', press: () {}),
               PlanList(),
