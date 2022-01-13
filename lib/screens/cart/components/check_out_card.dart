@@ -49,13 +49,13 @@ class CheckoutCard extends StatelessWidget {
                   child: SvgPicture.asset("assets/icons/receipt.svg"),
                 ),
                 Spacer(),
-                Text("اضف الكوبون الخاص بك"),
+                // Text("اضف الكوبون الخاص بك"),
                 const SizedBox(width: 10),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: 12,
-                  color: kTextColor,
-                )
+                // Icon(
+                //   Icons.arrow_forward_ios,
+                //   size: 12,
+                //   color: kTextColor,
+                // )
               ],
             ),
             SizedBox(height: (20)),
@@ -67,7 +67,7 @@ class CheckoutCard extends StatelessWidget {
                     text: "المجموع:\n",
                     children: [
                       TextSpan(
-                        text: "\$337.15",
+                        text: "\$0",
                         style: TextStyle(fontSize: 16, color: Colors.black),
                       ),
                     ],

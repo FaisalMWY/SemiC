@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.0.1
   google_fonts: ^2.1.0
   scrollable_positioned_list: ^0.1.10
+  carousel_slider: ^4.0.0
   flutter_localizations:
     sdk: flutter
 

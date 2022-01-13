@@ -3,6 +3,7 @@ import 'package:plant_app/components/custom_surfix_icon.dart';
 import 'package:plant_app/components/default_button.dart';
 import 'package:plant_app/components/form_error.dart';
 import 'package:plant_app/components/no_account_text.dart';
+import 'package:plant_app/screens/sign_in/sign_in_screen.dart';
 
 import '../../../constants.dart';
 
@@ -18,17 +19,23 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: 800 * 0.04),
               Text(
-                "في حال نسيت كلمة المرور",
+                "نسيت كلمة المرور؟",
                 style: TextStyle(
                   fontSize: (28),
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
-                "نروجو منك ادحال البريد الإلكتروني الخاص بك \nحتى نرسل لك رابط تغيير الكلمة السرية",
-                textAlign: TextAlign.center,
+              AspectRatio(
+                aspectRatio: 2,
+                child: Image.asset(
+                  'assets/images/forgot_password.png',
+                ),
               ),
+              // Text(
+              //   "t",
+              //   textAlign: TextAlign.center,
+              // ),
               SizedBox(height: 800 * 0.1),
               ForgotPassForm(),
             ],
@@ -112,16 +119,18 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             ),
             SizedBox(height: (30)),
             FormError(errors: errors),
-            SizedBox(height: 800 * 0.1),
+            SizedBox(height: 800 * 0.01),
             DefaultButton(
-              text: "Continue",
+              text: "ارسل رمز التحقق",
               press: () {
                 if (_formKey.currentState.validate()) {
                   // Do what you want to do
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignInScreen()));
                 }
               },
             ),
-            SizedBox(height: 800 * 0.1),
+            SizedBox(height: 800 * 0.01),
             NoAccountText(),
           ],
         ),

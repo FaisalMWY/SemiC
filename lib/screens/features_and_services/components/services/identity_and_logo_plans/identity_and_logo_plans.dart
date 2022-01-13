@@ -9,7 +9,7 @@ class IdentityAndLogoPlans extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 547,
+      height: 520,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(

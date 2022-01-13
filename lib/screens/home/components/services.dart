@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:plant_app/screens/features_and_services/components/service_list.dart';
 import 'package:plant_app/screens/home/components/who_are_we.dart';
+import 'package:plant_app/screens/home/home_screen.dart';
 
 class Services extends StatelessWidget {
   @override

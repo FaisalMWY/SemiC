@@ -7,32 +7,19 @@ class HighlightsCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> imgList = [
+      'assets/images/our_work.jpg',
+      'assets/images/semi_1.jpg'
+    ];
     return Column(
       children: [
         WhoAreWe(
           text: 'امور تهمك',
           press: () {},
-          buttonText: 'اعمالنا',
+          buttonText: '',
         ),
         SizedBox(height: 20),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          reverse: true,
-          child: Row(
-            children: [
-              Highlights(
-                  title: 'الهوية البصرية',
-                  image: 'assets/images/our_work.jpg',
-                  quote: '',
-                  press: () {}),
-              Highlights(
-                  title: '%خصومات تصل الى 50',
-                  image: 'assets/images/semi_1.jpg',
-                  quote: '',
-                  press: () {}),
-            ],
-          ),
-        ),
+        Highlights(image: imgList)
       ],
     );
   }

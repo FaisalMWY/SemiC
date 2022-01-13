@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/Notifications/notifications_screen.dart';
 import 'package:plant_app/screens/cart/cart_screen.dart';
 import 'package:plant_app/screens/cart/components/cart_card.dart';
 import 'package:plant_app/screens/home/components/icon_btn_with_counter.dart';
@@ -20,7 +21,12 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
             icon: CupertinoIcons.bell,
             numOfItems: 0,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationsScreen()),
+              );
+            },
           ),
           IconBtnWithCounter(
             icon: CupertinoIcons.cart,

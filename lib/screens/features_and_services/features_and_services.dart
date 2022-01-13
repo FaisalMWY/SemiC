@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/features_and_services/components/service_list.dart';
-import 'package:plant_app/screens/features_and_services/components/services/identity_and_logo_plans/identity_and_logo_plans.dart';
 import 'package:plant_app/screens/home/components/home_header.dart';
 
 class FeaturesAndServices extends StatelessWidget {

@@ -14,12 +14,14 @@ class SplashContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Spacer(),
+        Spacer(
+          flex: 1,
+        ),
         Text(
           "سيمي؛",
           style: TextStyle(
             fontSize: (36),
-            color: kPrimaryColor,
+            color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -27,11 +29,12 @@ class SplashContent extends StatelessWidget {
           text,
           textAlign: TextAlign.center,
         ),
-        Spacer(flex: 2),
-        Image.asset(
-          image,
-          height: (265),
-          width: (235),
+        Spacer(flex: 3),
+        AspectRatio(
+          aspectRatio: 1.5,
+          child: Image.asset(
+            image,
+          ),
         ),
       ],
     );

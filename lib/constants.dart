@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Colors that we use in our app
 const kPrimaryColor = Color(0xFFF3393d0);
-const kSecondaryColor = Color(0xFFF77c2c8);
+const kSecondaryColor = Color(0xFFFFC143);
 const kThirdColor = Color(0xFFF253b93);
 const kTextColor = Color(0xFF3C4046);
 const kBackgroundColor = Color(0xFFF9F8FD);
@@ -19,12 +19,13 @@ const String kInvalidEmailError = "الرجاء أدخال بريد إلكترو
 const String kPassNullError = "الرجاء إدخال كلمة المرور";
 const String kShortPassError = "كلمة المرور قصيرة جداًًَ";
 const String kMatchPassError = "كلمة المرور لا تتطابق";
-const String kNamelNullError = "الرجاء ادخال الأسم";
+const String kNamelNullError = "الرجاء ادخال الإسم الاول";
 const String kPhoneNumberNullError = "الرجاء أدخال رقم الهاتف";
 const String kAddressNullError = "الرجاء ادخال العنوان";
+const String kLastNameNullError = "الرجاء ادخال الإسم الأخير";
 
 final headingStyle = TextStyle(
-  fontSize: 28,
+  fontSize: 24,
   fontWeight: FontWeight.bold,
   color: Colors.black,
   height: 1.5,

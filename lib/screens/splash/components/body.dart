@@ -47,7 +47,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: (20)),
                 child: Column(

@@ -18,50 +18,51 @@ class HomeScreen extends StatefulWidget {
 var currentpage = drawerSections.Home_page;
 
 class _HomeScreenState extends State<HomeScreen> {
-  int index = 2;
+  int index = 1;
   @override
   Widget build(BuildContext context) {
     var container;
     final items = <Widget>[
+      // SvgPicture.asset(
+      //   'assets/icons/our_work.svg',
+      //   height: 28,
+      //   width: 28,
+      // ),
       SvgPicture.asset(
-        'assets/icons/our_work.svg',
+        'assets/icons/work.svg',
         height: 28,
         width: 28,
       ),
       SvgPicture.asset(
-        'assets/icons/services.svg',
+        'assets/icons/house.svg',
         height: 28,
         width: 28,
       ),
+      // SvgPicture.asset(
+      //   'assets/icons/contact_us.svg',
+      //   height: 28,
+      //   width: 28,
+      // ),
       SvgPicture.asset(
-        'assets/icons/home.svg',
-        height: 28,
-        width: 28,
-      ),
-      SvgPicture.asset(
-        'assets/icons/contact_us.svg',
-        height: 28,
-        width: 28,
-      ),
-      SvgPicture.asset(
-        'assets/icons/User Icon.svg',
-        height: 28,
-        width: 28,
+        'assets/icons/profile.svg',
+        height: 23,
+        width: 23,
         color: Color(0xFF000000),
       ),
     ];
 
-    if (index == 2) {
+    if (index == 1) {
       container = Body();
     } else if (index == 0) {
-      // container = AboutUs();
-    } else if (index == 1) {
       container = FeaturesAndServices();
-    } else if (index == 3) {
-      // container = OurResume();
-    } else if (index == 4) {
+    } else if (index == 2) {
       container = ProfileScreen();
     }
+    //  else if (index == 3) {
+    //   // container = OurResume();
+    // } else if (index == 4) {
+    //   container = ProfileScreen();
+    // }
 
     return Scaffold(
       //appBar: buildAppBar(),
@@ -77,21 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // (Fiverr): Scaffold itself has the Drawer option.
       //           Because you already have a Listview, the SingleChildScrollView
       //           is not needed.
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            MyHeaderDrawer(),
-            // (Fiverr 2.0): Handle the callback and set the State
-            MyDrawerList(
-              drawerSelectedCallback: (selectedSection) => setState(
-                () {
-                  currentpage = selectedSection;
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
+
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: kPrimaryColor,
@@ -102,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
         items: items,
         onTap: (index) => setState(() => this.index = index),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 

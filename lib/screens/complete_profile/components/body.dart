@@ -15,14 +15,16 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 800 * 0.03),
-                Text("أكمال الملف الشخصي", style: headingStyle),
-                Text(
-                  " أكمل بياناتك او \nاكمل ببرامج التواصل الإجتماعي",
-                  textAlign: TextAlign.center,
+                // Text("أكمال الملف الشخصي", style: headingStyle),
+                AspectRatio(
+                  aspectRatio: 2,
+                  child: Image.asset(
+                    'assets/images/complete_sign_up.png',
+                  ),
                 ),
-                SizedBox(height: 800 * 0.06),
+                SizedBox(height: 800 * 0.01),
                 CompleteProfileForm(),
-                SizedBox(height: (30)),
+                SizedBox(height: (10)),
                 Text(
                   "بالأستمرار انت تقر على الموافقه\nعلى الشروط الأحكام",
                   textAlign: TextAlign.center,

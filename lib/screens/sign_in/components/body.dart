@@ -27,28 +27,35 @@ class Body extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Raleway'),
                   ),
-                  Text(
-                    "سجل الدخول بالبريد الالكتروني ورمز المرور  \nأو عن طريق برامج التواصل الاجتماعي  ",
-                    textAlign: TextAlign.center,
+                  AspectRatio(
+                    aspectRatio: 13 / 6,
+                    child: Image.asset(
+                      'assets/images/log_in_image.png',
+                      height: (265),
+                      width: (235),
+                    ),
                   ),
-                  SizedBox(height: 700 * 0.06),
+                  // Text(
+                  //   "سجل الدخول بالبريد الالكتروني ورمز المرور  \nأو عن طريق برامج التواصل الاجتماعي  ",
+                  //   textAlign: TextAlign.center,
+                  // ),
                   SignForm(),
                   SizedBox(height: 700 * 0.02),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocalCard(
-                          icon: "assets/icons/google-icon.svg", press: () {}),
-                      SocalCard(
-                        icon: "assets/icons/facebook-2.svg",
-                        press: () {},
-                      ),
-                      SocalCard(
-                        icon: "assets/icons/twitter.svg",
-                        press: () {},
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     SocalCard(
+                  //         icon: "assets/icons/google-icon.svg", press: () {}),
+                  //     SocalCard(
+                  //       icon: "assets/icons/facebook-2.svg",
+                  //       press: () {},
+                  //     ),
+                  //     SocalCard(
+                  //       icon: "assets/icons/twitter.svg",
+                  //       press: () {},
+                  //     ),
+                  //   ],
+                  // ),
                   SizedBox(height: (20)),
                   NoAccountText(),
                 ],
