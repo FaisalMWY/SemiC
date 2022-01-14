@@ -26,7 +26,7 @@ class PlanCards extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: kThirdColor,
+                  color: kPrimaryColor,
                 ),
               ),
               // SizedBox(
