@@ -9,7 +9,7 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 240,
+      width: 280,
       height: 45,
       decoration: BoxDecoration(
         color: kPrimaryColor.withOpacity(0.1),

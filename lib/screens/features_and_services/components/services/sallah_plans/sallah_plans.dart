@@ -11,7 +11,6 @@ class SallahPlans extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(

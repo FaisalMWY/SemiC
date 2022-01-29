@@ -12,7 +12,6 @@ class WebPlans extends StatelessWidget {
       'assets/images/web_ui_1.jpg'
     ];
     return Container(
-      height: 520,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(

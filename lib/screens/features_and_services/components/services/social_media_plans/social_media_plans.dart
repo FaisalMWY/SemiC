@@ -12,7 +12,6 @@ class SocialMediaPlans extends StatelessWidget {
       'assets/images/social_media.png'
     ];
     return Container(
-      height: 520,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(

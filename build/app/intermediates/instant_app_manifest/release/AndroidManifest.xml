@@ -3,7 +3,7 @@
     package="com.semiksa.Semi_App"
     android:targetSandboxVersion="2"
     android:versionCode="1"
-    android:versionName="2.8.0" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="16"

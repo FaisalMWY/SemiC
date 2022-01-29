@@ -14,7 +14,7 @@ class HighlightsCards extends StatelessWidget {
     return Column(
       children: [
         WhoAreWe(
-          text: 'امور تهمك',
+          text: 'أعمالنا',
           press: () {},
           buttonText: '',
         ),

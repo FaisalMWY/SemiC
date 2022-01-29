@@ -9,23 +9,9 @@ class PlanList extends StatelessWidget {
     return Column(
       children: [
         PlanCards(
-          title: 'سيمي بيسك',
+          title: '.فصل باقتك مع سيمي',
           image: 'assets/images/semiksa_drawer.jpg',
-          description: 'باقة تقدم لك تصميم ابداعي باقل تكلفة',
-          press: () {},
-        ),
-        SizedBox(height: 20),
-        PlanCards(
-          title: 'سيمي برو',
-          image: 'assets/images/semiksa_drawer.jpg',
-          description: 'باقة تقدم لك تصميم اكثر تناسقًا مع رغباتك',
-          press: () {},
-        ),
-        SizedBox(height: 20),
-        PlanCards(
-          title: '+سيمي برو',
-          image: 'assets/images/semiksa_drawer.jpg',
-          description: 'بافة تقدم لك تصميم ابداعي ورائع',
+          description: 'في قسم التسويق، نقدم لك فريق يتكفل في نشر مشروعك .',
           press: () {},
         ),
       ],

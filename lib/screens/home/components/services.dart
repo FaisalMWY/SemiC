@@ -20,7 +20,7 @@ class Services extends StatelessWidget {
         WhoAreWe(
           text: 'خدماتنا',
           press: () {},
-          buttonText: 'صفحة الخدمات',
+          buttonText: '',
         ),
         SizedBox(height: 20),
         Padding(

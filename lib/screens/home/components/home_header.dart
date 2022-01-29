@@ -28,16 +28,16 @@ class HomeHeader extends StatelessWidget {
               );
             },
           ),
-          IconBtnWithCounter(
-            icon: CupertinoIcons.cart,
-            numOfItems: 0,
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CartScreen()),
-              );
-            },
-          ),
+          // IconBtnWithCounter(
+          //   icon: CupertinoIcons.cart,
+          //   numOfItems: 0,
+          //   press: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => CartScreen()),
+          //     );
+          //   },
+          // ),
           SearchField(),
         ],
       ),

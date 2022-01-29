@@ -15,18 +15,18 @@ class Body extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
-            ProfilePic(),
-            SizedBox(height: 20),
-            ProfileMenu(
-              text: "حسابي",
-              icon: "assets/icons/User Icon.svg",
-              press: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyAccountScreen()),
-                )
-              },
-            ),
+            // ProfilePic(),
+            // SizedBox(height: 20),
+            // ProfileMenu(
+            //   text: "حسابي",
+            //   icon: "assets/icons/User Icon.svg",
+            //   press: () => {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => MyAccountScreen()),
+            //     )
+            //   },
+            // ),
             ProfileMenu(
               text: "التنبيهات",
               icon: "assets/icons/Bell.svg",

@@ -68,12 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
       //appBar: buildAppBar(),
       body: container,
       extendBody: true,
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: kSecondaryColor,
-          child: Icon(
-            Icons.arrow_upward,
-          ),
-          onPressed: scrollUp),
+      // floatingActionButton: FloatingActionButton(
+      //     backgroundColor: kSecondaryColor,
+      //     child: Icon(
+      //       Icons.arrow_upward,
+      //     ),
+      // onPressed: scrollUp),
 
       // (Fiverr): Scaffold itself has the Drawer option.
       //           Because you already have a Listview, the SingleChildScrollView
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
         items: items,
         onTap: (index) => setState(() => this.index = index),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 

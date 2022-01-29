@@ -11,7 +11,6 @@ class AppPlans extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
       width: double.infinity,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
